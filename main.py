@@ -3,12 +3,18 @@
 import names,uvicorn
 import requests,random
 from flask import *
+from chinesename import ChineseName
 from requests import Session
 from re       import search
 from fastapi import FastAPI
 import indian_names
 #app = Flask(__name__)
 app = FastAPI()
+
+
+
+
+          
 @app.get("/AFRIT/GET-List")
 async def say_hello():
     try:
@@ -22,6 +28,29 @@ async def say_hello():
             GOGO.append(nm12)
             GOGO.append(nm13)
             GOGO.append(nm14)
+        return {"AFRIT":"𝐓𝐋𝐄:@AFR_0 | @LPB_B" ,"GMAIL":GOGO}
+    except:
+        return {"AFRIT":"𝐓𝐋𝐄:@AFR_0 | @LPB_B","Check":"False"}
+
+@app.get("/AFRIT/GET-List1")
+async def say_hello():
+    try:
+        GOGO=[]
+        cn= ChineseName()
+        for i in range(1000):
+            GOGO.append(f"{cn.getName()}{cn.getBoyName()}{cn.getBoyName()}{cn.getName()} ")
+            GOGO.append(cn.getLastName()+cn.getBoyFirstName()+cn.getBoyFirstName() +cn.getLastName())   
+            GOGO.append(cn.getName()+cn.getBoyFirstName() +cn.getBoyFirstName() +cn.getLastName())   
+            GOGO.append(cn.getName()+' '+cn.getName() +' '+cn.getBoyFirstName() +' '+cn.getLastName())   
+            GOGO.append(cn.getName()+cn.getBoyName() +cn.getBoyName() +cn.getName())   
+            GOGO.append(cn.getBoyFirstName()+' '+cn.getBoyName() +' '+cn.getBoyName() +' '+cn.getBoyFirstName()) 
+            GOGO.append(cn.getName()+' '+cn.getBoyName() +' '+cn.getName() +' '+cn.getName()) 
+            GOGO.append(cn.getName()+cn.getBoyFirstName() +cn.getName() +cn.getName())
+            GOGO.append(cn.getName()+' '+cn.getBoyName() +' '+cn.getName() +' '+cn.getName())
+            GOGO.append(cn.getName()+' '+cn.getLastName() +cn.getName() +cn.getName())
+            GOGO.append(cn.getName()+' '+cn.getBoyName() +cn.getName() +' '+cn.getName()+' '+cn.getLastName())  
+            GOGO.append(cn.getName()+cn.getBoyName() +' '+cn.getBoyFirstName() +' '+cn.getLastName()+cn.getBoyFirstName())
+                
         return {"AFRIT":"𝐓𝐋𝐄:@AFR_0 | @LPB_B" ,"GMAIL":GOGO}
     except:
         return {"AFRIT":"𝐓𝐋𝐄:@AFR_0 | @LPB_B","Check":"False"}
