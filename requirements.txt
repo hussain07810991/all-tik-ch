@@ -1,3 +1,4 @@
+chinesename
 names
 colorama==0.4.6
 getuseragent==0.0.7
