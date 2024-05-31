@@ -16,7 +16,7 @@ app = FastAPI()
 
 
 
-#@app.get("/AFRIT/GET-List2")
+@app.get("/AFRIT/GET-List2")
 async def say_hello():
     try:
         GOGO=[]
@@ -31,7 +31,7 @@ async def say_hello():
         return {"AFRIT":"𝐓𝐋𝐄:@AFR_0 | @LPB_B" ,"GMAIL":GOGO}
     except:
         return {"AFRIT":"𝐓𝐋𝐄:@AFR_0 | @LPB_B","Check":"False"}   
-#@app.get("/AFRIT/GET-List")
+@app.get("/AFRIT/GET-List")
 async def say_hello():
     try:
         GOGO=[]
@@ -48,7 +48,7 @@ async def say_hello():
     except:
         return {"AFRIT":"𝐓𝐋𝐄:@AFR_0 | @LPB_B","Check":"False"}
 
-#@app.get("/AFRIT/GET-List1")
+@app.get("/AFRIT/GET-List1")
 async def say_hello():
     try:
         GOGO=[]
@@ -155,8 +155,8 @@ def check_email(email):
     
 #Tiktok
 #INSTA
-#@app.get("/AFRIT/Checker-BOT-Tiktok={name}")
-@app.get("/AFRIT/Checker-BOT-INSTA={name}")
+@app.get("/AFRIT/Checker-BOT-Tiktok={name}")
+#@app.get("/AFRIT/Checker-BOT-INSTA={name}")
 async def say_hello2(name):
     url = requests.get(f"https://api.telegram.org/bot6432095654:AAEUfAW7ZkZz9BgGMK-QAYc8xie6LNJJSPI/getchatmember?chat_id=@Afrit09&user_id={name}").text
     if "member" in url or "creator" in url or "administartor" in url:
