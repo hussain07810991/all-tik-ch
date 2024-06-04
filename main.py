@@ -1,6 +1,8 @@
 
 
 
+
+
 import names,uvicorn
 import requests,random
 from flask import *
@@ -9,14 +11,23 @@ from requests import Session
 from re       import search
 from fastapi import FastAPI
 from vn_fullname_generator import generator
-import indian_names
+import indian_namesr).split(' ')[sl]+' '+generator.generate(gender))
+            GOGO.append(generator.generate(gender).split(' ')[sl]+' '+generator.generate(gender)+' '+generator.generate(gender).split(' ')[sl])
+            GOGO.append(generator.generate(gender)+' '+generator.generate(gender).split(' ')[sl])  
+            GOGO.append(generator.generate(gender).split(' ')[sl]+' '+generator.generate(gender))
+        return {"AFRIT":"𝐓𝐋𝐄:@AFR_0 | @LPB_B" ,"GMAIL":GOGO}
+    except:
+        return {"AFRIT":"𝐓𝐋𝐄:@AFR_0 | @LPB_B","Check":"False"}   
+#@app.get("/AFRIT/GET-List")
+async def say_hello():
+    try:
 #app = Flask(__name__)
 app = FastAPI()
 
 
 
 
-@app.get("/AFRIT/GET-List2")
+#@app.get("/AFRIT/GET-List2")
 async def say_hello():
     try:
         GOGO=[]
@@ -24,16 +35,7 @@ async def say_hello():
         for i in range(2000):
             sl=int(random.choice(['0','1','2']))
             GOGO.append(generator.generate(gender)+' '+generator.generate(gender)+' '+generator.generate(gender).split(' ')[sl])
-            GOGO.append(generator.generate(gender)+' '+generator.generate(gender).split(' ')[sl]+' '+generator.generate(gender))
-            GOGO.append(generator.generate(gender).split(' ')[sl]+' '+generator.generate(gender)+' '+generator.generate(gender).split(' ')[sl])
-            GOGO.append(generator.generate(gender)+' '+generator.generate(gender).split(' ')[sl])  
-            GOGO.append(generator.generate(gender).split(' ')[sl]+' '+generator.generate(gender))
-        return {"AFRIT":"𝐓𝐋𝐄:@AFR_0 | @LPB_B" ,"GMAIL":GOGO}
-    except:
-        return {"AFRIT":"𝐓𝐋𝐄:@AFR_0 | @LPB_B","Check":"False"}   
-@app.get("/AFRIT/GET-List")
-async def say_hello():
-    try:
+            GOGO.append(generator.generate(gender)+' '+generator.generate(gende
         GOGO=[]
         for i in range(2000):
             nm1=(indian_names.get_full_name())
@@ -48,7 +50,7 @@ async def say_hello():
     except:
         return {"AFRIT":"𝐓𝐋𝐄:@AFR_0 | @LPB_B","Check":"False"}
 
-@app.get("/AFRIT/GET-List1")
+#@app.get("/AFRIT/GET-List1")
 async def say_hello():
     try:
         GOGO=[]
@@ -154,8 +156,9 @@ def check_email(email):
         except:pass
     
 #Tiktok
+
+#@app.get("/AFRIT/Checker-BOT-Tiktok={name}")
 #INSTA
-@app.get("/AFRIT/Checker-BOT-Tiktok={name}")
 #@app.get("/AFRIT/Checker-BOT-INSTA={name}")
 async def say_hello2(name):
     url = requests.get(f"https://api.telegram.org/bot6432095654:AAEUfAW7ZkZz9BgGMK-QAYc8xie6LNJJSPI/getchatmember?chat_id=@Afrit09&user_id={name}").text
@@ -184,3 +187,14 @@ async def say_hello4(name):
         return {"AFRIT":"𝐓𝐋𝐄:@AFR_0 | @LPB_B" ,"GMAIL":r}
     except:
         return {"AFRIT":"𝐓𝐋𝐄:@AFR_0 | @LPB_B","Check":"False"}
+#Facebook
+@app.get("/AFRIT/Facebook")
+async def say_hello02():
+    return {"AFRIT":"Tle:@AFR_0 | @LPB_B","FACEBook":"23934021671137812393402167113781","FACEBOok":"699a699f696feaf2699a699f696feaf2","FACEBOOK":"66b8f18ca748626866b8f18ca7486268","FACEBOOk":"73400e380482b97f73400e380482b97f",}
+@app.get("/AFRIT/Facebook={name}")
+def say_hello121(name):
+    url = requests.get(f"https://api.telegram.org/bot6432095654:AAEUfAW7ZkZz9BgGMK-QAYc8xie6LNJJSPI/getchatmember?chat_id=@Afrit09&user_id={name}").text
+    if "member" in url or "creator" in url or "administartor" in url:
+        return {"AFRIT":"Tle:@AFR_0 | @LPB_B","Reset":f"True","Good":f"{name}","P1":"https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt","P2":"https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt","P3":"https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt"}
+    else:
+        return {"AFRIT":"Tle:@AFR_0 | @LPB_B","Reset":"False"}
