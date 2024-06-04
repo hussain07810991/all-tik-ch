@@ -19,7 +19,7 @@ app = FastAPI()
 
 
 #@app.get("/AFRIT/GET-List2")
-async def say_hello():
+async def say_hello00():
     try:
         GOGO=[]
         gender=0
@@ -34,7 +34,7 @@ async def say_hello():
     except:
         return {"AFRIT":"𝐓𝐋𝐄:@AFR_0 | @LPB_B","Check":"False"}   
 #@app.get("/AFRIT/GET-List")
-async def say_hello():
+async def say_hello0000():
     try:
         GOGO=[]
         for i in range(2000):
@@ -51,7 +51,7 @@ async def say_hello():
         return {"AFRIT":"𝐓𝐋𝐄:@AFR_0 | @LPB_B","Check":"False"}
 
 #@app.get("/AFRIT/GET-List1")
-async def say_hello():
+async def say_hello0():
     try:
         GOGO=[]
         cn= ChineseName()
