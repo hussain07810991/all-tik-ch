@@ -162,9 +162,9 @@ def check_email(email):
 #@app.get("/AFRIT/Checker-BOT-Facebook={name}")
 #Tiktok
 
-@app.get("/AFRIT/Checker-BOT-Tiktok={name}")
+#@app.get("/AFRIT/Checker-BOT-Tiktok={name}")
 #INSTA
-#@app.get("/AFRIT/Checker-BOT-INSTA={name}")
+@app.get("/AFRIT/Checker-BOT-INSTA={name}")
 async def say_hello2(name):
     url = requests.get(f"https://api.telegram.org/bot6432095654:AAEUfAW7ZkZz9BgGMK-QAYc8xie6LNJJSPI/getchatmember?chat_id=@Afrit09&user_id={name}").text
     if "member" in url or "creator" in url or "administartor" in url:
