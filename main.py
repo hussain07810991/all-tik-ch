@@ -159,10 +159,10 @@ def check_email(email):
 
 
 
-@app.get("/AFRIT/Checker-BOT-Facebook={name}")
+#@app.get("/AFRIT/Checker-BOT-Facebook={name}")
 #Tiktok
 
-#@app.get("/AFRIT/Checker-BOT-Tiktok={name}")
+@app.get("/AFRIT/Checker-BOT-Tiktok={name}")
 #INSTA
 #@app.get("/AFRIT/Checker-BOT-INSTA={name}")
 async def say_hello2(name):
@@ -193,6 +193,6 @@ async def say_hello4(name):
     except:
         return {"AFRIT":"𝐓𝐋𝐄:@AFR_0 | @LPB_B","Check":"False"}
 #Facebook
-@app.get("/AFRIT/Facebook")
+#@app.get("/AFRIT/Facebook")
 async def say_hello02():
     return {"AFRIT":"Tle:@AFR_0 | @LPB_B","FACEBook":"23934021671137812393402167113781","FACEBOok":"699a699f696feaf2699a699f696feaf2","FACEBOOK":"66b8f18ca748626866b8f18ca7486268","FACEBOOk":"73400e380482b97f73400e380482b97f",}
