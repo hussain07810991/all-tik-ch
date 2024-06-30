@@ -159,10 +159,10 @@ def check_email(email):
 
 
 
-@app.get("/AFRIT/Checker-BOT-Facebook={name}")
+#@app.get("/AFRIT/Checker-BOT-Facebook={name}")
 #Tiktok
 
-#@app.get("/AFRIT/Checker-BOT-Tiktok={name}")
+@app.get("/AFRIT/Checker-BOT-Tiktok={name}")
 #INSTA
 #@app.get("/AFRIT/Checker-BOT-INSTA={name}")
 #@app.get("/AFRIT/Checker-BOT-INSTA-User={name}")
