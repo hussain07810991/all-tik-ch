@@ -5,6 +5,8 @@
 
 
 
+
+
 import names,uvicorn
 import requests,random
 from flask import *
@@ -158,11 +160,11 @@ def check_email(email):
         except:pass
 
 
-
+@app.get("/AFRIT/Checker-BOT-Twit={name}")
 #@app.get("/AFRIT/Checker-BOT-Facebook={name}")
 #Tiktok
 
-@app.get("/AFRIT/Checker-BOT-Tiktok={name}")
+#@app.get("/AFRIT/Checker-BOT-Tiktok={name}")
 #INSTA
 #@app.get("/AFRIT/Checker-BOT-INSTA={name}")
 #@app.get("/AFRIT/Checker-BOT-INSTA-User={name}")
@@ -197,3 +199,36 @@ async def say_hello4(name):
 @app.get("/AFRIT/Facebook")
 async def say_hello02():
     return {"AFRIT":"Tle:@AFR_0 | @LPB_B","FACEBook":"23934021671137812393402167113781","FACEBOok":"699a699f696feaf2699a699f696feaf2","FACEBOOK":"66b8f18ca748626866b8f18ca7486268","FACEBOOk":"73400e380482b97f73400e380482b97f",}
+
+#twit
+@app.get("/AFRIT/INFO-YWI={name}")
+async def say_hello4(name):
+    try:
+        t = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+        'Authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA' ,}
+        token = requests.post('https://api.twitter.com/1.1/guest/activate.json' ,headers=t).json()['guest_token']
+
+
+        t.update({'x-guest-token': f'{token}',})
+        
+        u=f'https://twitter.com/i/api/graphql/sLVLhk0bGj3MVFEKTdax1w/UserByScreenName?variables=%7B%22screen_name%22%3A%22{name}%22%2C%22withSafetyModeUserFields%22%3Atrue%7D&features=%7B%22blue_business_profile_image_shape_enabled%22%3Atrue%2C%22responsive_web_graphql_exclude_directive_enabled%22%3Atrue%2C%22verified_phone_label_enabled%22%3Afalse%2C%22responsive_web_graphql_skip_user_profile_image_extensions_enabled%22%3Afalse%2C%22responsive_web_graphql_timeline_navigation_enabled%22%3Atrue%7D'
+        r=requests.get(u,headers=t).json()['data']['user']['result']
+
+        rest_id=r['rest_id']
+        fol=r["legacy"]['friends_count']
+        followers=r["legacy"]['followers_count']
+        user=r["legacy"]['screen_name']
+        nam=r["legacy"]["name"]
+        media_count=r["legacy"]['media_count']
+        created_at=r["legacy"]['created_at']
+        return {"rest_id":rest_id,
+                "fol":fol,
+                "followers":followers,
+                "user":user,
+                "nam":nam,
+                "media_count":media_count,
+                "created_at":created_at,}
+    except:
+        return {"AFRIT":"𝐓𝐋𝐄:@AFR_0 | @LPB_B","Check":"False"}
+    
