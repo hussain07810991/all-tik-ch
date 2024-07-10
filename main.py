@@ -160,11 +160,11 @@ def check_email(email):
         except:pass
 
 
-#@app.get("/AFRIT/Checker-BOT-Twit={name}")
+@app.get("/AFRIT/Checker-BOT-Twit={name}")
 #@app.get("/AFRIT/Checker-BOT-Facebook={name}")
 #Tiktok
 
-@app.get("/AFRIT/Checker-BOT-Tiktok={name}")
+#@app.get("/AFRIT/Checker-BOT-Tiktok={name}")
 #INSTA
 #@app.get("/AFRIT/Checker-BOT-INSTA={name}")
 #@app.get("/AFRIT/Checker-BOT-INSTA-User={name}")
@@ -201,7 +201,7 @@ async def say_hello02():
     return {"AFRIT":"Tle:@AFR_0 | @LPB_B","FACEBook":"23934021671137812393402167113781","FACEBOok":"699a699f696feaf2699a699f696feaf2","FACEBOOK":"66b8f18ca748626866b8f18ca7486268","FACEBOOk":"73400e380482b97f73400e380482b97f",}
 
 #twit
-#@app.get("/AFRIT/INFO-YWI={name}")
+@app.get("/AFRIT/INFO-YWI={name}")
 async def say_hello4(name):
     try:
         t = {
