@@ -160,13 +160,13 @@ def check_email(email):
         except:pass
 
 
-#@app.get("/AFRIT/Checker-BOT-Twit={name}")
+@app.get("/AFRIT/Checker-BOT-Twit={name}")
 #@app.get("/AFRIT/Checker-BOT-Facebook={name}")
 #Tiktok
 
 #@app.get("/AFRIT/Checker-BOT-Tiktok={name}")
 #INSTA
-@app.get("/AFRIT/Checker-BOT-INSTA={name}")
+#@app.get("/AFRIT/Checker-BOT-INSTA={name}")
 #@app.get("/AFRIT/Checker-BOT-INSTA-User={name}")
 async def say_hello2(name):
     url = requests.get(f"https://api.telegram.org/bot6432095654:AAEUfAW7ZkZz9BgGMK-QAYc8xie6LNJJSPI/getchatmember?chat_id=@Afrit09&user_id={name}").text
